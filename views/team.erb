@@ -5,8 +5,12 @@
   <title>Basketball Team</title>
  </head>
  <body>
- 
-
+     <h2><%= "Team Name: #{@data["Team Name"]}" %></h2>
+    <% @data.each do |position, name| %>
+        <% unless position=="Team Name" || position == "Submit"%>
+    <h3><%=     "#{position}: #{name}"  %></h3>
+        <% end %>
+    <% end %>
 
  </body>
 </html>
